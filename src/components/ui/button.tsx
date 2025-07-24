@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        diplomatic: "relative overflow-hidden bg-gradient-to-r from-primary to-primary-light text-primary-foreground font-semibold transition-all duration-300 hover:shadow-diplomatic hover:scale-105",
+        "secondary-diplomatic": "bg-gradient-to-r from-secondary to-secondary-light text-secondary-foreground font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105",
+        "outline-diplomatic": "border-2 border-primary text-primary bg-transparent font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-diplomatic",
       },
       size: {
         default: "h-10 px-4 py-2",

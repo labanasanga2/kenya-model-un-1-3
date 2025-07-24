@@ -1,42 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* KMUN Design System - UN-inspired diplomatic theme */
 
 @layer base {
   :root {
+    /* Core UN-inspired color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* UN Blue Primary */
+    --primary: 210 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 35%;
+    --primary-dark: 210 100% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Diplomatic Gold Secondary */
+    --secondary: 45 100% 50%;
+    --secondary-foreground: 220 15% 15%;
+    --secondary-light: 45 100% 60%;
+    --secondary-dark: 45 100% 40%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Neutral grays */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 15% 95%;
+    --accent-foreground: 220 15% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 210 100% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom KMUN colors */
+    --un-blue: 210 100% 25%;
+    --un-gold: 45 100% 50%;
+    --diplomatic-gray: 220 10% 50%;
+    --conference-blue: 210 80% 30%;
+    --chapter-green: 140 60% 40%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-diplomatic: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-dark) / 0.8));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--background) / 0.1), hsl(var(--muted) / 0.1));
+
+    /* Shadows */
+    --shadow-diplomatic: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-glass: 0 8px 32px 0 hsl(var(--primary) / 0.1);
+    --shadow-elevated: 0 20px 60px -10px hsl(var(--primary) / 0.2);
+
+    /* Animations */
+    --transition-diplomatic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +130,90 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Glassmorphism components */
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-md bg-white/90 border-b border-white/20;
+  }
+
+  /* Diplomatic buttons */
+  .btn-diplomatic {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-diplomatic hover:scale-105;
+  }
+
+  .btn-secondary-diplomatic {
+    @apply bg-gradient-to-r from-secondary to-secondary-light text-secondary-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+
+  .btn-outline-diplomatic {
+    @apply border-2 border-primary text-primary bg-transparent px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-diplomatic;
+  }
+
+  /* Hero sections */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .diplomatic-gradient {
+    background: var(--gradient-diplomatic);
+  }
+
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  /* Committee cards */
+  .committee-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-elevated hover:-translate-y-2;
+  }
+
+  /* Chapter cards */
+  .chapter-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/20;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
