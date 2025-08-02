@@ -22,6 +22,11 @@ export default {
 				'inter': ['Inter', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 			},
+			boxShadow: {
+				'diplomatic': '0 10px 40px -10px hsl(var(--primary) / 0.3)',
+				'glass': '0 8px 32px 0 hsl(var(--primary) / 0.1)',
+				'elevated': '0 20px 60px -10px hsl(var(--primary) / 0.2)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
