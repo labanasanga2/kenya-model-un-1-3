@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -59,29 +60,24 @@
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-dark) / 0.8));
     --gradient-glass: linear-gradient(135deg, hsl(var(--background) / 0.1), hsl(var(--muted) / 0.1));
 
-    /* Shadows */
+    /* Enhanced shadows */
     --shadow-diplomatic: 0 10px 40px -10px hsl(var(--primary) / 0.3);
     --shadow-glass: 0 8px 32px 0 hsl(var(--primary) / 0.1);
     --shadow-elevated: 0 20px 60px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.15);
 
-    /* Animations */
+    /* Modern animations */
     --transition-diplomatic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -132,10 +128,15 @@
   body {
     @apply bg-background text-foreground font-inter;
   }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
-  /* Glassmorphism components */
+  /* Enhanced glassmorphism components */
   .glass-card {
     @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl;
     box-shadow: var(--shadow-glass);
@@ -145,7 +146,7 @@
     @apply backdrop-blur-md bg-white/90 border-b border-white/20;
   }
 
-  /* Diplomatic buttons */
+  /* Modern diplomatic buttons */
   .btn-diplomatic {
     @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-diplomatic hover:scale-105;
   }
@@ -167,17 +168,42 @@
     background: var(--gradient-diplomatic);
   }
 
-  /* Animations */
+  /* Enhanced animations */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
 
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
   }
 
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
   }
 
   /* Committee cards */
@@ -189,11 +215,53 @@
   .chapter-card {
     @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/20;
   }
+
+  /* Grid pattern background */
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Magnetic hover effect */
+  .magnetic-hover {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .magnetic-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  /* Parallax scrolling */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Loading spinner */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-4 border-primary/20 border-t-primary;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(1deg); }
+  66% { transform: translateY(-10px) rotate(-1deg); }
 }
 
 @keyframes fadeInUp {
@@ -215,5 +283,103 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.1);
+  }
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive design enhancements */
+@media (max-width: 640px) {
+  .animate-fade-in-up {
+    animation-duration: 0.6s;
+  }
+  
+  .animate-slide-in-right {
+    animation-duration: 0.4s;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

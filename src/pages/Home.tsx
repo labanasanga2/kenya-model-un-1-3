@@ -1,11 +1,14 @@
-import HeroSection from '@/components/Home/HeroSection';
-import QuickLinksSection from '@/components/Home/QuickLinksSection';
+
+import ModernHero from '@/components/Modern/ModernHero';
+import AnimatedStats from '@/components/Modern/AnimatedStats';
+import ModernFeatures from '@/components/Modern/ModernFeatures';
 
 const Home = () => {
   return (
     <div className="min-h-screen">
-      <HeroSection />
-      <QuickLinksSection />
+      <ModernHero />
+      <AnimatedStats />
+      <ModernFeatures />
     </div>
   );
 };
