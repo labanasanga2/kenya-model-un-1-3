@@ -27,16 +27,13 @@ const Contact = () => {
           {/* Quick contact badges */}
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
-              <span className="text-primary font-semibold">📧  info@kenyamodelun.or.ke
-
-</span>
+              <span className="text-primary font-semibold">📧 info@kmun.org</span>
             </div>
             <div className="bg-secondary/10 px-6 py-3 rounded-full border border-secondary/20">
-              <span className="text-secondary-foreground font-semibold">📞Phone: +254 (0) 748 802283
-Phone: +254 (0) 110 564334</span>
+              <span className="text-secondary-foreground font-semibold">📞 +254 700 000 000</span>
             </div>
             <div className="bg-chapter-green/10 px-6 py-3 rounded-full border border-chapter-green/20">
-              <span className="text-chapter-green font-semibold">📍 KMUN,</span>
+              <span className="text-chapter-green font-semibold">📍 UNON Gigiri</span>
             </div>
           </div>
         </div>
