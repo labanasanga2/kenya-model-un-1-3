@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: 'HOME', href: '/', },
+    { name: 'Home', href: '/', icon: Globe },
     { name: 'About', href: '/about', icon: BookOpen },
     { name: 'Chapters', href: '/chapters', icon: Users },
     { name: 'Committees', href: '/committees', icon: Users },
