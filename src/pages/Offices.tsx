@@ -19,7 +19,7 @@ const Offices = () => {
         {
           name: 'Secretary General',
           role: 'Chief Executive Officer',
-          person: 'NAME',
+          person: 'Michael Kiprotich',
           email: 'sg@kmun.org',
           image: 'photo-1581092795360-fd1ca04f0952',
           description: 'Provides overall leadership and strategic direction for KMUN.'
@@ -27,7 +27,7 @@ const Offices = () => {
         {
           name: 'Office of the Executive Assistant',
           role: 'Executive Support',
-          person: 'NAME',
+          person: 'Sarah Wanjiku',
           email: 'executive.assistant@kmun.org',
           image: 'photo-1581091226825-a6a2a5aee158',
           description: 'Manages executive schedules and high-level administrative tasks.'
@@ -43,7 +43,7 @@ const Offices = () => {
         {
           name: 'Alumni Relations Office',
           role: 'Alumni Director',
-          person: 'NAME',
+          person: 'Grace Cheptoo',
           email: 'alumni@kmun.org',
           image: 'photo-1581091226825-a6a2a5aee158',
           description: 'Maintains relationships with KMUN alumni and organizes alumni events.'
@@ -51,7 +51,7 @@ const Offices = () => {
         {
           name: 'Membership Office',
           role: 'Membership Director',
-          person: 'NAME',
+          person: 'David Kiprotich',
           email: 'membership@kmun.org',
           image: 'photo-1581092795360-fd1ca04f0952',
           description: 'Manages membership registration and chapter coordination.'
@@ -59,7 +59,7 @@ const Offices = () => {
         {
           name: 'Projects Office',
           role: 'Projects Director',
-          person: 'NAME',
+          person: 'Amina Hassan',
           email: 'projects@kmun.org',
           image: 'photo-1581091226825-a6a2a5aee158',
           description: 'Coordinates special projects and initiatives across all chapters.'
@@ -123,15 +123,7 @@ const Offices = () => {
         {
           name: 'Communications Director',
           role: 'Head of Communications',
-          person: 'Amanda',
-          email: 'communications@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
-          description: 'Oversees all communication strategies and public relations.'
-        },
-        {
-          name: 'Deputy Communications Director',
-          role: 'Deputy Head of Communications',
-          person: 'Junita',
+          person: 'Alice Nyambura',
           email: 'communications@kmun.org',
           image: 'photo-1581091226825-a6a2a5aee158',
           description: 'Oversees all communication strategies and public relations.'
@@ -139,15 +131,7 @@ const Offices = () => {
         {
           name: 'Web Developers',
           role: 'Technical Team',
-          person: 'Laban Asanga',
-          email: 'web@kmun.org',
-          image: 'photo-1487058792275-0ad442f0af775',
-          description: 'Develops and maintains KMUN websites and digital platforms.'
-        },
-        {
-          name: 'Web Developers',
-          role: 'Technical Team',
-          person: 'Wesley Kuria',
+          person: 'Kevin Ochieng',
           email: 'web@kmun.org',
           image: 'photo-1487058792275-0ad442f0af775',
           description: 'Develops and maintains KMUN websites and digital platforms.'
@@ -155,7 +139,7 @@ const Offices = () => {
         {
           name: 'Graphic Designers',
           role: 'Visual Design Team',
-          person: 'NAME',
+          person: 'Diana Muthoni',
           email: 'graphics@kmun.org',
           image: 'photo-1473091534298-04dcbce3278c',
           description: 'Creates visual content and branding materials for KMUN.'
@@ -227,7 +211,7 @@ const Offices = () => {
         {
           name: 'President of ICJ',
           role: 'Chief Justice',
-          person: 'NAME',
+          person: 'Prof. Margaret Kenyatta',
           email: 'icj.president@kmun.org',
           image: 'photo-1581091226825-a6a2a5aee158',
           description: 'Presides over ICJ proceedings and ensures legal procedures.'
@@ -235,7 +219,7 @@ const Offices = () => {
         {
           name: 'Vice President of ICJ',
           role: 'Deputy Chief Justice',
-          person: 'NAME',
+          person: 'Dr. Joseph Kimutai',
           email: 'icj.vp@kmun.org',
           image: 'photo-1581092795360-fd1ca04f0952',
           description: 'Assists the President and handles case assignments.'
@@ -243,7 +227,7 @@ const Offices = () => {
         {
           name: 'Registrar',
           role: 'Court Administrator',
-          person: 'NAME',
+          person: 'Lawyer Susan Wairimu',
           email: 'icj.registrar@kmun.org',
           image: 'photo-1581091226825-a6a2a5aee158',
           description: 'Manages court administration and legal documentation.'

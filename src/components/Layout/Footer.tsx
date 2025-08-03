@@ -99,7 +99,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-secondary" />
                 <span className="text-primary-foreground/80 text-sm">
-                  KMUN, Nairobi, Kenya
+                  UNON Gigiri, Nairobi, Kenya
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -108,7 +108,7 @@ const Footer = () => {
                   href="mailto:info@kmun.org"
                   className="text-primary-foreground/80 hover:text-secondary transition-colors text-sm"
                 >
-                   info@kenyamodelun.or.ke
+                  info@kmun.org
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -117,8 +117,7 @@ const Footer = () => {
                   href="tel:+254700000000"
                   className="text-primary-foreground/80 hover:text-secondary transition-colors text-sm"
                 >
-                 Phone: +254 (0) 748 802283
-                 Phone: +254 (0) 110 564334
+                  +254 700 000 000
                 </a>
               </div>
             </div>
