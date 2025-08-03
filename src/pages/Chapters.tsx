@@ -154,13 +154,22 @@ const Chapters = () => {
             {filteredChapters.map((chapter) => (
               <Card key={chapter.id} className="chapter-card">
                 <CardHeader>
-                  <CardTitle className="text-xl font-bold text-primary">
-                    {chapter.university}
-                  </CardTitle>
-                  <CardDescription className="flex items-center text-muted-foreground">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    {chapter.location}
-                  </CardDescription>
+                  <div className="flex items-center gap-4 mb-4">
+                    <img 
+                      src="/placeholder.svg" 
+                      alt={`${chapter.university} Logo`}
+                      className="w-12 h-12 rounded-lg object-cover border-2 border-primary/20"
+                    />
+                    <div>
+                      <CardTitle className="text-xl font-bold text-primary">
+                        {chapter.university}
+                      </CardTitle>
+                      <CardDescription className="flex items-center text-muted-foreground">
+                        <MapPin className="h-4 w-4 mr-1" />
+                        {chapter.location}
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground">

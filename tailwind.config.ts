@@ -50,6 +50,7 @@ export default {
 				'diplomatic-gray': 'hsl(var(--diplomatic-gray))',
 				'conference-blue': 'hsl(var(--conference-blue))',
 				'chapter-green': 'hsl(var(--chapter-green))',
+				'kmun-red': 'hsl(var(--kmun-red))',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

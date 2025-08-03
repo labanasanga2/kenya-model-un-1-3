@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Users, Calendar, BookOpen, Camera, Phone } from 'lucide-react';
+import { Menu, X, Globe, Users, Calendar, BookOpen, Camera, Phone, Building, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +13,8 @@ const Navbar = () => {
     { name: 'About', href: '/about', icon: BookOpen },
     { name: 'Chapters', href: '/chapters', icon: Users },
     { name: 'Committees', href: '/committees', icon: Users },
+    { name: 'Offices', href: '/offices', icon: Building },
+    { name: 'Leadership', href: '/leadership', icon: Award },
     { name: 'Conference', href: '/conference', icon: Calendar },
     { name: 'Media', href: '/media', icon: Camera },
     { name: 'Contact', href: '/contact', icon: Phone },
@@ -25,9 +28,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center">
-              <Globe className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img 
+              src="/placeholder.svg" 
+              alt="KMUN Logo" 
+              className="w-10 h-10 rounded-lg object-cover border-2 border-primary/20"
+            />
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-primary font-playfair">KMUN</h1>
               <p className="text-xs text-muted-foreground">Kenya Model UN</p>
@@ -55,8 +60,9 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Link to="/registration">
               <Button variant="diplomatic">
                 Register Now
@@ -64,8 +70,9 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button & theme toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               onClick={() => setIsOpen(!isOpen)}
