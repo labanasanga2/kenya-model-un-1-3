@@ -310,10 +310,9 @@ const Registration = () => {
             {/* Navigation Buttons */}
             <div className="flex justify-between mt-8">
               <Button
-                variant="outline"
+                variant="outline-diplomatic"
                 onClick={handleBack}
                 disabled={currentStep === 1}
-                className="btn-outline-diplomatic"
               >
                 Back
               </Button>
@@ -322,7 +321,7 @@ const Registration = () => {
                 <Button
                   onClick={handleNext}
                   disabled={currentStep === 1 && !formData.role}
-                  className="btn-diplomatic"
+                  variant="diplomatic"
                 >
                   Next
                 </Button>
@@ -330,7 +329,7 @@ const Registration = () => {
                 <Button
                   onClick={handleSubmit}
                   disabled={!formData.terms}
-                  className="btn-diplomatic"
+                  variant="diplomatic"
                 >
                   Submit Registration
                 </Button>

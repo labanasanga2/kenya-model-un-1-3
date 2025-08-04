@@ -238,10 +238,11 @@ const Media = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn-diplomatic px-4 py-2 text-sm inline-flex items-center gap-2"
                           >
-                            <ExternalLink className="h-4 w-4" />
-                            Open
+                            <Button variant="diplomatic" size="sm">
+                              <ExternalLink className="h-4 w-4 mr-2" />
+                              Open
+                            </Button>
                           </a>
                         </div>
                       </div>
@@ -305,11 +306,11 @@ const Media = () => {
               Please contact our communications team for commercial usage permissions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:media@kmun.org" className="btn-diplomatic inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-diplomatic hover:scale-105">
-                Contact Media Team
+              <a href="mailto:media@kmun.org">
+                <Button variant="diplomatic" size="lg">Contact Media Team</Button>
               </a>
-              <a href="/contact" className="btn-outline-diplomatic inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-diplomatic">
-                Usage Guidelines
+              <a href="/contact">
+                <Button variant="outline-diplomatic" size="lg">Usage Guidelines</Button>
               </a>
             </div>
           </div>

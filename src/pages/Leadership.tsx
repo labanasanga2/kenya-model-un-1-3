@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Calendar, Award, Mail, Linkedin } from 'lucide-react';
 
 const Leadership = () => {
@@ -310,11 +311,11 @@ const Leadership = () => {
               Connect with past leaders and current members to continue the legacy of diplomatic excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:alumni@kmun.org" className="btn-diplomatic inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-diplomatic hover:scale-105">
-                Join Alumni Network
+              <a href="mailto:alumni@kmun.org">
+                <Button variant="diplomatic" size="lg">Join Alumni Network</Button>
               </a>
-              <a href="/contact" className="btn-outline-diplomatic inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-diplomatic">
-                Contact Leadership
+              <a href="/contact">
+                <Button variant="outline-diplomatic" size="lg">Contact Leadership</Button>
               </a>
             </div>
           </div>

@@ -529,10 +529,10 @@ const Offices = () => {
               Join one of our offices and contribute to Kenya's leading Model UN organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-diplomatic">
+              <Button variant="diplomatic">
                 Apply Now
               </Button>
-              <Button variant="outline" className="btn-outline-diplomatic">
+              <Button variant="outline-diplomatic">
                 Learn More
               </Button>
             </div>

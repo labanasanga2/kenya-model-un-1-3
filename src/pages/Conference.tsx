@@ -111,11 +111,11 @@ const Conference = () => {
           
           <div className="mt-8">
             <Link to="/registration">
-              <Button size="lg" className="btn-secondary-diplomatic mr-4">
+              <Button size="lg" variant="secondary-diplomatic" className="mr-4">
                 Register Now
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="btn-outline-diplomatic border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="outline-diplomatic" className="border-white text-white hover:bg-white hover:text-primary">
               Download Brochure
             </Button>
           </div>
@@ -225,7 +225,7 @@ const Conference = () => {
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                     <p className="text-muted-foreground">Interactive campus map coming soon</p>
-                    <Button variant="outline" className="mt-4 btn-outline-diplomatic">
+                    <Button variant="outline-diplomatic" className="mt-4">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View on Google Maps
                     </Button>
@@ -260,7 +260,7 @@ const Conference = () => {
                   <CardDescription>{download.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full btn-outline-diplomatic">
+                  <Button variant="outline-diplomatic" className="w-full">
                     Download {download.type}
                   </Button>
                 </CardContent>
@@ -281,12 +281,12 @@ const Conference = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
-                <Button size="lg" className="btn-diplomatic">
+                <Button size="lg" variant="diplomatic">
                   Register as Delegate
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="btn-outline-diplomatic">
+                <Button size="lg" variant="outline-diplomatic">
                   Contact Us
                 </Button>
               </Link>

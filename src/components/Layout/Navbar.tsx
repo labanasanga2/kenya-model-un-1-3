@@ -27,27 +27,27 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
             <img 
               src="/placeholder.svg" 
               alt="KMUN Logo" 
               className="w-10 h-10 rounded-lg object-cover border-2 border-primary/20"
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-primary font-playfair">KMUN</h1>
+              <h1 className="text-xl font-bold text-primary font-playfair">KMUN2</h1>
               <p className="text-xs text-muted-foreground">Kenya Model UN</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-1 flex-1 justify-center max-w-4xl mx-4">
             {navLinks.map((link) => {
               const Icon = link.icon;
               return (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-2 ${
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-1.5 ${
                     isActive(link.href)
                       ? 'bg-primary text-primary-foreground shadow-md'
                       : 'text-foreground hover:bg-muted hover:text-primary'
@@ -61,7 +61,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button & Theme Toggle */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
             <ThemeToggle />
             <Link to="/registration">
               <Button variant="diplomatic">
@@ -70,8 +70,17 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button & theme toggle */}
-          <div className="md:hidden flex items-center space-x-2">
+          {/* Medium screen CTA & Mobile menu button & theme toggle */}
+          <div className="flex items-center space-x-2">
+            <div className="hidden md:flex lg:hidden">
+              <ThemeToggle />
+              <Link to="/registration" className="ml-2">
+                <Button variant="diplomatic" size="sm">
+                  Register
+                </Button>
+              </Link>
+            </div>
+          <div className="lg:hidden flex items-center space-x-2">
             <ThemeToggle />
             <Button
               variant="ghost"
@@ -81,12 +90,13 @@ const Navbar = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-lg border-t border-border">
             {navLinks.map((link) => {
               const Icon = link.icon;

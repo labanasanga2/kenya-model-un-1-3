@@ -202,7 +202,7 @@ const Chapters = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full btn-outline-diplomatic">
+                  <Button variant="outline-diplomatic" className="w-full">
                     Join Chapter
                   </Button>
                 </CardContent>
@@ -230,10 +230,10 @@ const Chapters = () => {
               a new chapter at your institution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-diplomatic">
+              <Button variant="diplomatic">
                 Start a Chapter
               </Button>
-              <Button variant="outline" className="btn-outline-diplomatic">
+              <Button variant="outline-diplomatic">
                 Chapter Resources
               </Button>
             </div>

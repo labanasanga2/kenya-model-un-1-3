@@ -171,10 +171,10 @@ const Committees = () => {
 
                     {/* CTA Section */}
                     <div className="flex flex-col justify-center space-y-4">
-                      <Button className="btn-diplomatic w-full">
+                      <Button variant="diplomatic" className="w-full">
                         Apply for {committee.acronym}
                       </Button>
-                      <Button variant="outline" className="btn-outline-diplomatic w-full">
+                      <Button variant="outline-diplomatic" className="w-full">
                         Committee Guide
                       </Button>
                       <div className="text-center text-sm text-muted-foreground">
@@ -210,7 +210,7 @@ const Committees = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="btn-outline-diplomatic">
+                <Button variant="outline-diplomatic">
                   Download Guides
                 </Button>
               </CardContent>
@@ -224,7 +224,7 @@ const Committees = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="btn-outline-diplomatic">
+                <Button variant="outline-diplomatic">
                   View Rules
                 </Button>
               </CardContent>
@@ -238,7 +238,7 @@ const Committees = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="btn-outline-diplomatic">
+                <Button variant="outline-diplomatic">
                   Register for Training
                 </Button>
               </CardContent>

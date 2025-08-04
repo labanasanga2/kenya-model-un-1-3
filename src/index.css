@@ -92,11 +92,17 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Fixed dark mode primary colors - keep UN blue but visible */
+    --primary: 210 100% 35%;
+    --primary-foreground: 210 40% 98%;
+    --primary-light: 210 100% 45%;
+    --primary-dark: 210 100% 25%;
 
+    /* Fixed dark mode secondary colors */
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
+    --secondary-light: 217.2 32.6% 25%;
+    --secondary-dark: 217.2 32.6% 15%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -110,6 +116,14 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
+    /* Dark mode KMUN colors */
+    --un-blue: 210 100% 35%;
+    --un-gold: 45 100% 60%;
+    --diplomatic-gray: 220 10% 70%;
+    --conference-blue: 210 80% 40%;
+    --chapter-green: 140 60% 50%;
+    --kmun-red: 0 80% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -144,7 +158,7 @@
   }
 
   .glass-nav {
-    @apply backdrop-blur-md bg-white/90 border-b border-white/20;
+    @apply backdrop-blur-md bg-background/90 dark:bg-background/95 border-b border-border;
   }
 
   /* Modern diplomatic buttons */
