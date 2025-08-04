@@ -480,9 +480,12 @@ const Offices = () => {
                         {office.subOffices.map((member, index) => (
                           <div key={index} className="flex items-center space-x-4 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
                             <img
-                              src={`https://images.unsplash.com/${member.image}?w=64&h=64&fit=crop&crop=face`}
+                              src={`/src/assets/profile-pictures/${member.image || 'placeholder.jpg'}`}
                               alt={member.person}
                               className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+                              onError={(e) => {
+                                e.currentTarget.src = `https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=64&h=64&fit=crop&crop=face`;
+                              }}
                             />
                             <div className="flex-1 min-w-0">
                               <div className="font-semibold text-foreground truncate">{member.person}</div>
