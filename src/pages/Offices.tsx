@@ -6,8 +6,26 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+// Import profile pictures
+import michaelKiprotichImage from '@/assets/images/profile-pictures/michael-kiprotich.jpg';
+import sarahWanjikuImage from '@/assets/images/profile-pictures/sarah-wanjiku.jpg';
+import defaultMaleImage from '@/assets/images/profile-pictures/default-male.jpg';
+import defaultFemaleImage from '@/assets/images/profile-pictures/default-female.jpg';
+
 const Offices = () => {
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Function to get profile picture
+  const getProfilePicture = (person: string, gender: 'male' | 'female' = 'male') => {
+    switch (person) {
+      case 'Michael Kiprotich':
+        return michaelKiprotichImage;
+      case 'Sarah Wanjiku':
+        return sarahWanjikuImage;
+      default:
+        return gender === 'female' ? defaultFemaleImage : defaultMaleImage;
+    }
+  };
 
   const offices = [
     {
@@ -480,12 +498,9 @@ const Offices = () => {
                         {office.subOffices.map((member, index) => (
                           <div key={index} className="flex items-center space-x-4 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
                             <img
-                              src={`/src/assets/profile-pictures/${member.image || 'placeholder.jpg'}`}
+                              src={getProfilePicture(member.person, member.person.includes('Grace') || member.person.includes('Sarah') || member.person.includes('Diana') || member.person.includes('Faith') || member.person.includes('Rebecca') || member.person.includes('Catherine') || member.person.includes('Patricia') || member.person.includes('Mercy') || member.person.includes('Esther') || member.person.includes('Agnes') || member.person.includes('Alice') || member.person.includes('Amina') || member.person.includes('Mary') || member.person.includes('Margaret') || member.person.includes('Susan') || member.person.includes('Elizabeth') || member.person.includes('Jane') || member.person.includes('Linda') ? 'female' : 'male')}
                               alt={member.person}
                               className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
-                              onError={(e) => {
-                                e.currentTarget.src = `https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=64&h=64&fit=crop&crop=face`;
-                              }}
                             />
                             <div className="flex-1 min-w-0">
                               <div className="font-semibold text-foreground truncate">{member.person}</div>
