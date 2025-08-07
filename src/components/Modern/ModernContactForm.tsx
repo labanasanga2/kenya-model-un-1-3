@@ -24,22 +24,31 @@ const ModernContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission with enhanced feedback
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSuccess(true);
-    setIsSubmitting(false);
-    
-    toast({
-      title: "Message Sent Successfully!",
-      description: "We've received your message and will respond within 24 hours.",
-    });
-    
-    // Reset form after success animation
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '', type: 'general' });
-      setIsSuccess(false);
-    }, 3000);
+    try {
+      // Simulate sending email to KMUN official
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setIsSuccess(true);
+      setIsSubmitting(false);
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Your message has been sent to KMUN. Please await official communication within 24-48 hours.",
+      });
+      
+      // Reset form after success animation
+      setTimeout(() => {
+        setFormData({ name: '', email: '', subject: '', message: '', type: 'general' });
+        setIsSuccess(false);
+      }, 3000);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

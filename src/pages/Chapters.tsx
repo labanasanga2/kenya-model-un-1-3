@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Search, MapPin, Users, Mail } from 'lucide-react';
+import { Search, MapPin, Users, Mail, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -202,8 +203,10 @@ const Chapters = () => {
                     </div>
                   </div>
 
-                  <Button variant="outline-diplomatic" className="w-full">
-                    Join Chapter
+                  <Button variant="outline-diplomatic" className="w-full" asChild>
+                    <Link to={`/chapters/${chapter.university.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>
+                      Join Chapter
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

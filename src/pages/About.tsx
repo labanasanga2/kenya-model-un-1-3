@@ -1,6 +1,6 @@
 import { Award, Globe, Target, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import delegatesImage from '@/assets/delegates-networking.jpg';
+import delegatesImage from '@/assets/images/hero/delegates-networking.jpg';
 
 const About = () => {
   const values = [

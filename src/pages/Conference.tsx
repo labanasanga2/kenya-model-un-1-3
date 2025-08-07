@@ -2,7 +2,7 @@ import { Calendar, MapPin, Clock, Users, Download, ExternalLink } from 'lucide-r
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-unon.jpg';
+import heroImage from '@/assets/images/hero/hero-unon.jpg';
 
 const Conference = () => {
   const schedule = [

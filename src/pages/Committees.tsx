@@ -1,7 +1,7 @@
 import { Scale, Users, Globe } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import committeeImage from '@/assets/committee-meeting.jpg';
+import committeeImage from '@/assets/images/hero/committee-meeting.jpg';
 
 const Committees = () => {
   const committees = [
@@ -210,8 +210,10 @@ const Committees = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline-diplomatic">
-                  Download Guides
+                <Button variant="outline-diplomatic" asChild>
+                  <a href="/sample-kmun-guide.pdf" download="kmun-study-guides.pdf">
+                    Download Guides
+                  </a>
                 </Button>
               </CardContent>
             </Card>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Users, Globe, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-unon.jpg';
+import heroImage from '@/assets/images/hero/hero-unon.jpg';
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({

@@ -7,6 +7,7 @@ import Layout from "@/components/Layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Chapters from "./pages/Chapters";
+import ChapterDetail from "./pages/ChapterDetail";
 import Committees from "./pages/Committees";
 import Offices from "./pages/Offices";
 import Leadership from "./pages/Leadership";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/chapters" element={<Chapters />} />
+            <Route path="/chapters/:chapterSlug" element={<ChapterDetail />} />
             <Route path="/committees" element={<Committees />} />
             <Route path="/offices" element={<Offices />} />
             <Route path="/leadership" element={<Leadership />} />
