@@ -2,7 +2,7 @@ import { Calendar, MapPin, Clock, Users, Download, ExternalLink } from 'lucide-r
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/images/hero/hero-unon.jpg';
+
 
 const Conference = () => {
   const schedule = [
@@ -75,7 +75,7 @@ const Conference = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src="/images/hero/hero-unon.jpg"
             alt="UNON Conference"
             className="w-full h-full object-cover"
           />

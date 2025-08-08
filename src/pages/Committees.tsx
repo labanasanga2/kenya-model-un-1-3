@@ -1,7 +1,7 @@
 import { Scale, Users, Globe } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import committeeImage from '@/assets/images/hero/committee-meeting.jpg';
+
 
 const Committees = () => {
   const committees = [
@@ -84,7 +84,7 @@ const Committees = () => {
             </div>
             <div className="relative">
               <img 
-                src={committeeImage} 
+                src="/images/hero/committee-meeting.jpg" 
                 alt="Committee Meeting" 
                 className="rounded-2xl shadow-2xl"
               />

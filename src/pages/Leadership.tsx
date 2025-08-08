@@ -12,7 +12,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'University of Nairobi',
-      image: 'photo-1581091226825-a6a2a5aee158',
+      image: '/images/profile-pictures/default-female.jpg',
       email: 'sarah.kimani@alumni.kmun.org',
       linkedin: 'sarah-kimani-diplomacy',
       achievements: [
@@ -31,7 +31,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Strathmore University',
-      image: 'photo-1581092795360-fd1ca04f0952',
+      image: '/images/profile-pictures/default-male.jpg',
       email: 'james.mwangi@alumni.kmun.org',
       linkedin: 'james-mwangi-international-relations',
       achievements: [
@@ -50,7 +50,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Kenyatta University',
-      image: 'photo-1581091226825-a6a2a5aee158',
+      image: '/images/profile-pictures/default-female.jpg',
       email: 'margaret.kenyatta@alumni.kmun.org',
       linkedin: 'margaret-kenyatta-ga',
       achievements: [
@@ -69,7 +69,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'USIU-Africa',
-      image: 'photo-1581091226825-a6a2a5aee158',
+      image: '/images/profile-pictures/default-female.jpg',
       email: 'elizabeth.macharia@alumni.kmun.org',
       linkedin: 'elizabeth-macharia-international-law',
       achievements: [
@@ -88,7 +88,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Moi University',
-      image: 'photo-1581092795360-fd1ca04f0952',
+      image: '/images/profile-pictures/default-male.jpg',
       email: 'peter.kamau@alumni.kmun.org',
       linkedin: 'peter-kamau-icj',
       achievements: [
@@ -107,7 +107,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Technical University of Kenya',
-      image: 'photo-1581092795360-fd1ca04f0952',
+      image: '/images/profile-pictures/default-male.jpg',
       email: 'peter.waweru@alumni.kmun.org',
       linkedin: 'peter-waweru-operations',
       achievements: [
@@ -126,7 +126,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Egerton University',
-      image: 'photo-1581092795360-fd1ca04f0952',
+      image: '/images/profile-pictures/default-male.jpg',
       email: 'moses.kiplagat@alumni.kmun.org',
       linkedin: 'moses-kiplagat-finance',
       achievements: [
@@ -145,7 +145,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Maseno University',
-      image: 'photo-1581091226825-a6a2a5aee158',
+      image: '/images/profile-pictures/default-female.jpg',
       email: 'alice.nyambura@alumni.kmun.org',
       linkedin: 'alice-nyambura-communications',
       achievements: [
@@ -205,7 +205,7 @@ const Leadership = () => {
                   <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
                   <div className="relative z-10 text-center">
                     <img
-                      src={`/images/profile-pictures/${leader.name.includes('Sarah') || leader.name.includes('Margaret') || leader.name.includes('Elizabeth') || leader.name.includes('Alice') ? 'default-female.jpg' : 'default-male.jpg'}`}
+                      src={leader.image}
                       alt={leader.name}
                       className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white/30 object-cover group-hover:scale-110 transition-transform duration-300"
                     />

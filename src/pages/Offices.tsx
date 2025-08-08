@@ -33,7 +33,7 @@ const Offices = () => {
           role: 'Chief Executive Officer',
           person: 'Michael Kiprotich',
           email: 'sg@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/michael-kiprotich.jpg',
           description: 'Provides overall leadership and strategic direction for KMUN.'
         },
         {
@@ -41,7 +41,7 @@ const Offices = () => {
           role: 'Executive Support',
           person: 'Sarah Wanjiku',
           email: 'executive.assistant@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/sarah-wanjiku.jpg',
           description: 'Manages executive schedules and high-level administrative tasks.'
         },
         {
@@ -49,7 +49,7 @@ const Offices = () => {
           role: 'Foundation Director',
           person: 'James Mwangi',
           email: 'foundation@kmun.org',
-          image: 'photo-1488590528505-98d2b5aba04b',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Oversees the foundation activities and community outreach programs.'
         },
         {
@@ -57,7 +57,7 @@ const Offices = () => {
           role: 'Alumni Director',
           person: 'Grace Cheptoo',
           email: 'alumni@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Maintains relationships with KMUN alumni and organizes alumni events.'
         },
         {
@@ -65,7 +65,7 @@ const Offices = () => {
           role: 'Membership Director',
           person: 'David Kiprotich',
           email: 'membership@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Manages membership registration and chapter coordination.'
         },
         {
@@ -73,7 +73,7 @@ const Offices = () => {
           role: 'Projects Director',
           person: 'Amina Hassan',
           email: 'projects@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Coordinates special projects and initiatives across all chapters.'
         },
         {
@@ -81,7 +81,7 @@ const Offices = () => {
           role: 'Strategy Director',
           person: 'Peter Kamau',
           email: 'strategy@kmun.org',
-          image: 'photo-1488590528505-98d2b5aba04b',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Develops long-term strategic plans and organizational development.'
         },
         {
@@ -89,7 +89,7 @@ const Offices = () => {
           role: 'International Relations Director',
           person: 'Mary Atieno',
           email: 'international@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Manages partnerships with international MUN organizations.'
         }
       ]
@@ -105,7 +105,7 @@ const Offices = () => {
           role: 'Presiding Officer',
           person: 'John Mutua',
           email: 'ga.president@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Presides over General Assembly sessions and maintains order.'
         },
         {
@@ -113,7 +113,7 @@ const Offices = () => {
           role: 'Deputy Presiding Officer',
           person: 'Grace Wanjiru',
           email: 'ga.vp@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Assists the President and handles special assignments.'
         },
         {
@@ -121,7 +121,7 @@ const Offices = () => {
           role: 'Administrative Support',
           person: 'Samuel Kiprotich',
           email: 'ga.secretariat@kmun.org',
-          image: 'photo-1488590528505-98d2b5aba04b',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Provides administrative and logistical support for GA sessions.'
         }
       ]
@@ -137,7 +137,7 @@ const Offices = () => {
           role: 'Head of Communications',
           person: 'Alice Nyambura',
           email: 'communications@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Oversees all communication strategies and public relations.'
         },
         {
@@ -145,7 +145,7 @@ const Offices = () => {
           role: 'Technical Team',
           person: 'Kevin Ochieng',
           email: 'web@kmun.org',
-          image: 'photo-1487058792275-0ad442f0af775',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Develops and maintains KMUN websites and digital platforms.'
         },
         {
@@ -153,7 +153,7 @@ const Offices = () => {
           role: 'Visual Design Team',
           person: 'Diana Muthoni',
           email: 'graphics@kmun.org',
-          image: 'photo-1473091534298-04dcbce3278c',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Creates visual content and branding materials for KMUN.'
         },
         {
@@ -161,7 +161,7 @@ const Offices = () => {
           role: 'Visual Documentation',
           person: 'Brian Kipchoge',
           email: 'photo@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Documents KMUN events and activities through photography.'
         },
         {
@@ -169,7 +169,7 @@ const Offices = () => {
           role: 'Content Creation',
           person: 'Faith Wanjiku',
           email: 'writers@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Creates written content for publications and digital media.'
         },
         {
@@ -177,7 +177,7 @@ const Offices = () => {
           role: 'Digital Engagement',
           person: 'Daniel Kimani',
           email: 'social@kmun.org',
-          image: 'photo-1488590528505-98d2b5aba04b',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Manages KMUN social media presence and online engagement.'
         },
         {
@@ -185,7 +185,7 @@ const Offices = () => {
           role: 'Regional Coordinators',
           person: 'Rebecca Cheptoo',
           email: 'local.comms@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Coordinates communications activities at chapter level.'
         }
       ]
@@ -201,7 +201,7 @@ const Offices = () => {
           role: 'Deputy Chief Executive',
           person: 'Catherine Njeri',
           email: 'deputy.sg@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Assists the SG and oversees partnership development.'
         },
         {
@@ -209,7 +209,7 @@ const Offices = () => {
           role: 'Partnership Director',
           person: 'Mark Kiptoo',
           email: 'partnerships@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Develops and maintains strategic partnerships with organizations.'
         }
       ]
@@ -225,7 +225,7 @@ const Offices = () => {
           role: 'Chief Justice',
           person: 'Prof. Margaret Kenyatta',
           email: 'icj.president@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Presides over ICJ proceedings and ensures legal procedures.'
         },
         {
@@ -233,7 +233,7 @@ const Offices = () => {
           role: 'Deputy Chief Justice',
           person: 'Dr. Joseph Kimutai',
           email: 'icj.vp@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Assists the President and handles case assignments.'
         },
         {
@@ -241,7 +241,7 @@ const Offices = () => {
           role: 'Court Administrator',
           person: 'Lawyer Susan Wairimu',
           email: 'icj.registrar@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Manages court administration and legal documentation.'
         }
       ]
@@ -257,7 +257,7 @@ const Offices = () => {
           role: 'Head of Conference',
           person: 'Anthony Mwangi',
           email: 'conference@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Oversees all aspects of conference planning and execution.'
         },
         {
@@ -265,7 +265,7 @@ const Offices = () => {
           role: 'Assistant Director',
           person: 'Patricia Akinyi',
           email: 'deputy.conference@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Supports the Director and manages specific conference areas.'
         },
         {
@@ -273,7 +273,7 @@ const Offices = () => {
           role: 'Logistics Coordinator',
           person: 'Robert Kigali',
           email: 'logistics@kmun.org',
-          image: 'photo-1488590528505-98d2b5aba04b',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Manages venue, catering, and logistical arrangements.'
         },
         {
@@ -281,7 +281,7 @@ const Offices = () => {
           role: 'Assistant Logistics',
           person: 'Mercy Wanjiku',
           email: 'deputy.logistics@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Assists with logistics coordination and implementation.'
         },
         {
@@ -289,7 +289,7 @@ const Offices = () => {
           role: 'Protocol Manager',
           person: 'Charles Kiptanui',
           email: 'protocol@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Manages diplomatic protocol and ceremonial events.'
         },
         {
@@ -297,7 +297,7 @@ const Offices = () => {
           role: 'Assistant Protocol',
           person: 'Esther Njeri',
           email: 'deputy.protocol@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Supports protocol activities and guest relations.'
         }
       ]
@@ -313,7 +313,7 @@ const Offices = () => {
           role: 'Chief Financial Officer',
           person: 'CPA Moses Kiplagat',
           email: 'finance@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Oversees all financial operations and fiscal management.'
         },
         {
@@ -321,7 +321,7 @@ const Offices = () => {
           role: 'Assistant CFO',
           person: 'Agnes Wanjiru',
           email: 'deputy.finance@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Assists with financial planning and budget management.'
         },
         {
@@ -329,7 +329,7 @@ const Offices = () => {
           role: 'Financial Analysts',
           person: 'Multiple Team Members',
           email: 'finance.bureau@kmun.org',
-          image: 'photo-1518770660439-4636190af475',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Handles day-to-day financial operations and reporting.'
         }
       ]
@@ -345,7 +345,7 @@ const Offices = () => {
           role: 'Commission Chair',
           person: 'Prof. Elizabeth Wambui',
           email: 'ilc.chair@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Chairs ILC sessions and guides legal discussions.'
         },
         {
@@ -353,7 +353,7 @@ const Offices = () => {
           role: 'Deputy Chair',
           person: 'Dr. Francis Macharia',
           email: 'ilc.vicechair@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Supports the Chair and leads working groups.'
         },
         {
@@ -361,7 +361,7 @@ const Offices = () => {
           role: 'Legal Reporter',
           person: 'Advocate Jane Mutindi',
           email: 'ilc.rapporteur@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Documents proceedings and prepares legal reports.'
         }
       ]
@@ -377,7 +377,7 @@ const Offices = () => {
           role: 'Operations Coordinator',
           person: 'Dr. Peter Waweru',
           email: 'chief.of.staff@kmun.org',
-          image: 'photo-1581092795360-fd1ca04f0952',
+          image: '/images/profile-pictures/default-male.jpg',
           description: 'Coordinates executive operations and strategic initiatives.'
         },
         {
@@ -385,7 +385,7 @@ const Offices = () => {
           role: 'Assistant Coordinator',
           person: 'Linda Chepkemoi',
           email: 'deputy.cos@kmun.org',
-          image: 'photo-1581091226825-a6a2a5aee158',
+          image: '/images/profile-pictures/default-female.jpg',
           description: 'Supports the Chief of Staff and manages special projects.'
         }
       ]
