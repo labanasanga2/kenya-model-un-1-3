@@ -1,6 +1,6 @@
 import { Award, Globe, Target, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import delegatesImage from '@/assets/images/hero/delegates-networking.jpg';
+
 
 const About = () => {
   const values = [
@@ -63,7 +63,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src={delegatesImage} 
+                src="/images/hero/delegates-networking.jpg" 
                 alt="KMUN Delegates" 
                 className="rounded-2xl shadow-2xl"
               />
