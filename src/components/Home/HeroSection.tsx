@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Users, Globe, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/images/hero/hero-unon.jpg';
+
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -36,7 +36,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src="/images/hero/hero-unon.jpg"
           alt="UNON Conference Hall"
           className="w-full h-full object-cover"
         />

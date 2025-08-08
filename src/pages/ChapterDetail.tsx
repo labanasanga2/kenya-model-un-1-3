@@ -23,7 +23,7 @@ const ChapterDetail = () => {
       established: '2020',
       email: 'unon@kmun.org',
       description: 'The flagship chapter of KMUN, representing the premier university in Kenya. Our members are passionate about international relations and diplomacy.',
-      bannerImage: '/src/assets/images/chapters/university-of-nairobi-banner.jpg',
+      bannerImage: '/images/chapters/university-of-nairobi-banner.jpg',
       achievements: [
         'Best Delegation Award 2023',
         'Outstanding Research Paper 2022',
@@ -44,7 +44,7 @@ const ChapterDetail = () => {
       established: '2021',
       email: 'ku@kmun.org',
       description: 'A vibrant chapter focused on youth leadership and international cooperation.',
-      bannerImage: '/src/assets/images/chapters/kenyatta-university-banner.jpg',
+      bannerImage: '/images/chapters/kenyatta-university-banner.jpg',
       achievements: [
         'Best New Chapter 2021',
         'Community Service Award 2022'

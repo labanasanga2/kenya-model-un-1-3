@@ -205,7 +205,7 @@ const Leadership = () => {
                   <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
                   <div className="relative z-10 text-center">
                     <img
-                      src={`https://images.unsplash.com/${leader.image}?w=120&h=120&fit=crop&crop=face`}
+                      src={`/images/profile-pictures/${leader.name.includes('Sarah') || leader.name.includes('Margaret') || leader.name.includes('Elizabeth') || leader.name.includes('Alice') ? 'default-female.jpg' : 'default-male.jpg'}`}
                       alt={leader.name}
                       className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white/30 object-cover group-hover:scale-110 transition-transform duration-300"
                     />

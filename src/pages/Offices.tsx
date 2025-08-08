@@ -6,12 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// Import profile pictures
-import michaelKiprotichImage from '@/assets/images/profile-pictures/michael-kiprotich.jpg';
-import sarahWanjikuImage from '@/assets/images/profile-pictures/sarah-wanjiku.jpg';
-import defaultMaleImage from '@/assets/images/profile-pictures/default-male.jpg';
-import defaultFemaleImage from '@/assets/images/profile-pictures/default-female.jpg';
-
 const Offices = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -19,11 +13,11 @@ const Offices = () => {
   const getProfilePicture = (person: string, gender: 'male' | 'female' = 'male') => {
     switch (person) {
       case 'Michael Kiprotich':
-        return michaelKiprotichImage;
+        return '/images/profile-pictures/michael-kiprotich.jpg';
       case 'Sarah Wanjiku':
-        return sarahWanjikuImage;
+        return '/images/profile-pictures/sarah-wanjiku.jpg';
       default:
-        return gender === 'female' ? defaultFemaleImage : defaultMaleImage;
+        return gender === 'female' ? '/images/profile-pictures/default-female.jpg' : '/images/profile-pictures/default-male.jpg';
     }
   };
 
