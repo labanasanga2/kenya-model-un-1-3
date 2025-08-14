@@ -208,6 +208,13 @@ const Leadership = () => {
                       src={leader.image}
                       alt={leader.name}
                       className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white/30 object-cover group-hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${leader.image} for ${leader.name}`);
+                        e.currentTarget.src = '/images/profile-pictures/default-male.jpg';
+                      }}
+                      onLoad={() => {
+                        console.log(`Successfully loaded image: ${leader.image} for ${leader.name}`);
+                      }}
                     />
                     <CardTitle className="text-xl font-bold font-playfair">{leader.name}</CardTitle>
                     <CardDescription className="text-white/90 text-sm font-medium">

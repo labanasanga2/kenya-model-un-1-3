@@ -495,6 +495,13 @@ const Offices = () => {
                               src={getProfilePicture(member.person, member.person.includes('Grace') || member.person.includes('Sarah') || member.person.includes('Diana') || member.person.includes('Faith') || member.person.includes('Rebecca') || member.person.includes('Catherine') || member.person.includes('Patricia') || member.person.includes('Mercy') || member.person.includes('Esther') || member.person.includes('Agnes') || member.person.includes('Alice') || member.person.includes('Amina') || member.person.includes('Mary') || member.person.includes('Margaret') || member.person.includes('Susan') || member.person.includes('Elizabeth') || member.person.includes('Jane') || member.person.includes('Linda') ? 'female' : 'male')}
                               alt={member.person}
                               className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+                              onError={(e) => {
+                                console.error(`Failed to load image for ${member.person}: ${e.currentTarget.src}`);
+                                e.currentTarget.src = '/images/profile-pictures/default-male.jpg';
+                              }}
+                              onLoad={(e) => {
+                                console.log(`Successfully loaded image for ${member.person}: ${e.currentTarget.src}`);
+                              }}
                             />
                             <div className="flex-1 min-w-0">
                               <div className="font-semibold text-foreground truncate">{member.person}</div>
