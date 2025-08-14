@@ -12,7 +12,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'University of Nairobi',
-      image: '/images/profile-pictures/default-female.jpg',
+      image: '/images/profile-pictures/sarah-wanjiku.jpg',
       email: 'sarah.kimani@alumni.kmun.org',
       linkedin: 'sarah-kimani-diplomacy',
       achievements: [
@@ -31,7 +31,7 @@ const Leadership = () => {
       session: '24th Session',
       year: '2024-2025',
       university: 'Strathmore University',
-      image: '/images/profile-pictures/default-male.jpg',
+      image: '/images/profile-pictures/michael-kiprotich.jpg',
       email: 'james.mwangi@alumni.kmun.org',
       linkedin: 'james-mwangi-international-relations',
       achievements: [

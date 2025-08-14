@@ -49,7 +49,7 @@ const Offices = () => {
           role: 'Foundation Director',
           person: 'James Mwangi',
           email: 'foundation@kmun.org',
-          image: '/images/profile-pictures/default-male.jpg',
+          image: '/images/profile-pictures/michael-kiprotich.jpg',
           description: 'Oversees the foundation activities and community outreach programs.'
         },
         {
@@ -57,7 +57,7 @@ const Offices = () => {
           role: 'Alumni Director',
           person: 'Grace Cheptoo',
           email: 'alumni@kmun.org',
-          image: '/images/profile-pictures/default-female.jpg',
+          image: '/images/profile-pictures/sarah-wanjiku.jpg',
           description: 'Maintains relationships with KMUN alumni and organizes alumni events.'
         },
         {
