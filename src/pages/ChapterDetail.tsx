@@ -24,6 +24,13 @@ const ChapterDetail = () => {
       email: 'unon@kmun.org',
       description: 'The flagship chapter of KMUN, representing the premier university in Kenya. Our members are passionate about international relations and diplomacy.',
       bannerImage: '/images/chapters/university-of-nairobi-banner.jpg',
+      logo: '/images/chapters/university-of-nairobi-logo.png',
+      gallery: [
+        '/images/chapters/university-of-nairobi-meeting.jpg',
+        '/images/chapters/university-of-nairobi-event.jpg',
+        '/images/chapters/university-of-nairobi-group.jpg',
+        '/images/chapters/university-of-nairobi-debate.jpg'
+      ],
       achievements: [
         'Best Delegation Award 2023',
         'Outstanding Research Paper 2022',
@@ -45,6 +52,12 @@ const ChapterDetail = () => {
       email: 'ku@kmun.org',
       description: 'A vibrant chapter focused on youth leadership and international cooperation.',
       bannerImage: '/images/chapters/kenyatta-university-banner.jpg',
+      logo: '/images/chapters/kenyatta-university-logo.png',
+      gallery: [
+        '/images/chapters/kenyatta-university-meeting.jpg',
+        '/images/chapters/kenyatta-university-orientation.jpg',
+        '/images/chapters/kenyatta-university-team.jpg'
+      ],
       achievements: [
         'Best New Chapter 2021',
         'Community Service Award 2022'
@@ -103,9 +116,19 @@ const ChapterDetail = () => {
 
         {/* Hero Section */}
         <Card className="mb-8 overflow-hidden">
-          <div className="h-64 bg-gradient-to-r from-primary/20 to-primary-foreground/10 flex items-center justify-center">
+          <div className="h-64 bg-gradient-to-r from-primary/20 to-primary-foreground/10 flex items-center justify-center relative">
             <div className="text-center">
-              <h1 className="text-4xl font-bold mb-2">{chapter.university}</h1>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <img 
+                  src={chapter.logo}
+                  alt={`${chapter.university} Logo`}
+                  className="w-16 h-16 rounded-full object-cover border-4 border-primary/30 shadow-lg"
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder.svg';
+                  }}
+                />
+                <h1 className="text-4xl font-bold">{chapter.university}</h1>
+              </div>
               <p className="text-xl text-muted-foreground flex items-center justify-center gap-2">
                 <MapPin className="w-5 h-5" />
                 {chapter.location}
@@ -140,6 +163,32 @@ const ChapterDetail = () => {
                     <Badge key={index} variant="secondary" className="justify-start">
                       {achievement}
                     </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Chapter Photos */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Chapter Gallery</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4">
+                  {chapter.gallery.map((photo, index) => (
+                    <div key={index} className="relative group overflow-hidden rounded-lg">
+                      <img 
+                        src={photo}
+                        alt={`${chapter.university} photo ${index + 1}`}
+                        className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-110"
+                        onError={(e) => {
+                          e.currentTarget.src = '/placeholder.svg';
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">View Photo</span>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </CardContent>

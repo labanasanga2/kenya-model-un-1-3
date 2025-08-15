@@ -17,6 +17,7 @@ const Chapters = () => {
       email: 'uon@kmun.org',
       members: 120,
       established: 2002,
+      logo: '/images/chapters/university-of-nairobi-logo.png',
       description: 'The founding chapter of KMUN, known for excellence in General Assembly simulations.'
     },
     {
@@ -157,9 +158,12 @@ const Chapters = () => {
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <img 
-                      src="/placeholder.svg" 
+                      src={chapter.logo || "/placeholder.svg"} 
                       alt={`${chapter.university} Logo`}
                       className="w-12 h-12 rounded-lg object-cover border-2 border-primary/20"
+                      onError={(e) => {
+                        e.currentTarget.src = '/placeholder.svg';
+                      }}
                     />
                     <div>
                       <CardTitle className="text-xl font-bold text-primary">
